@@ -18,6 +18,7 @@ func main() {
 	app.Renderer = t
 
 	app.GET("/", routes.Home)
+	app.Static("/templates", "templates")
 	app.GET("/image", routes.RandomFiles)
 
 	err := app.Start(":1234")
